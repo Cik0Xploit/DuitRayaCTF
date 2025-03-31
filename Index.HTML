@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya CTF Challenge!</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #dec6a2;
+            color: #513f36;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://pngtree.com/freepng/ketupat-illustration-png_7693850.html');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #cb5b55;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .puzzle-box {
+            background-color: #c6d3a9;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .hint-box {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-left: 4px solid #83905c;
+            margin: 10px 0;
+            display: none;
+        }
+
+        button {
+            background-color: #cb5b55;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #b04a45;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            border: 2px solid #817b70;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .success-screen {
+            display: none;
+            background-color: #83905c;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 1s;
+        }
+
+        .qrcode {
+            margin: 20px auto;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .ketupat {
+            width: 80px;
+            margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="public/In Love Cat GIF.gif" alt="gif" class="GIF">
+        <h1>Raya CTF: Find the Duit Raya!</h1>
+        <p>Solve the challenge to get your Duit Raya!</p>
+        
+        <div class="puzzle-box">
+            <h3>🕵️‍♂️ Challenge: Base64 Decoding</h3>
+            <p><strong>TWF0Uml5ZXtuYWhfZHVpdF9yYXlhfQ==</strong></p>
+            
+            <button onclick="toggleHint()">Hint</button>
+            <div class="hint-box" id="hintBox">
+                <p>💡 Base64 je Syaaaaa! </p>
+                <p>https://gchq.github.io/CyberChef/</p>
+            </div>
+            
+            <input type="text" id="answerInput" placeholder="Flag Format : MatRiye{Flag}">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        
+        <div class="success-screen" id="successScreen">
+            <h2>🎉 Congratulations!🎉</h2>
+            <p>YEAYYYYY SYA DPT DUIT RAYA!</p>
+            <p>Scan the QR code below to claim your reward!</p>
+            <div class="qrcode">
+                <img src="public/WhatsApp Image 2025-03-31 at 14.29.50_9e04821e.jpg" width="400" height="600" alt="QR Code Duit Raya">
+            </div>
+            <p>💝 Special Message: <span id="personalMessage">Selamat Hari Raya! Send la gambar satu dua 👉👈 </span></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleHint() {
+            const hintBox = document.getElementById('hintBox');
+            hintBox.style.display = hintBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById('answerInput').value.trim();
+            const correctAnswer = "MatRiye{nah_duit_raya}"; // Accepts exact string
+            
+            if (userAnswer === correctAnswer) {
+                document.getElementById('successScreen').style.display = 'block';
+                document.querySelector('.puzzle-box').style.display = 'none';
+            } else {
+                alert("SALAH NI SYAAAA BUAT BALIK 😡");
+            }
+        }
+    </script>
+</body>
+</html>
