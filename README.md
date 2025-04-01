@@ -38,11 +38,12 @@ Host anywhere:
 - **Vercel**: Zero-config deploy
 
 ## 📸 Preview
-![Screenshot](https://i.imgur.com/your-screenshot-link.jpg)
+![image](https://github.com/user-attachments/assets/e9fef2de-70d3-4b5d-b04a-3119303ad037)
+
 
 ---
 
-Made with ❤️ for Selamat Hari Raya | [@YourGitHub](https://github.com/yourusername)
+Made with ❤️ for Selamat Hari Raya | [@Cik0Xploit](https://github.com/Cik0Xploit)
 ```
 
 ### Key Sections:
