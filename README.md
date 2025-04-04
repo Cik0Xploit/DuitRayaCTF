@@ -44,13 +44,3 @@ Host anywhere:
 ---
 
 Made with ❤️ for Selamat Hari Raya | [@Cik0Xploit](https://github.com/Cik0Xploit)
-```
-
-### Key Sections:
-1. **Eye-catching badges** for demo/tech stack  
-2. **Visual hierarchy** with emojis  
-3. **Customization notes** for easy tweaking  
-4. **Deployment options** for non-devs  
-5. **Screenshot placeholder** (replace with actual image later)
-
-Would you like me to add anything specific (e.g., Raya wishes in Malay, technical credits)? 😊
